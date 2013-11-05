@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,  initial-scale=1,height=device-height,maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>booHeart</title>
+<link rel="stylesheet" href="css/jquery.mobile-1.4.0-alpha.1.min.css" />
+<link rel="stylesheet" href="css/foundation.css">
+<link rel="stylesheet" href="A_01_barcode.css">
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/jquery.mobile-1.4.0-alpha.1.min.js"></script>
+<script src="js/vendor/custom.modernizr.js"></script>
+</head>
+<body>
+<div data-role="page" data-theme="{{datatheme}}" id="angelBarcode">
+  <div data-role="header" data-theme="{{datatheme}}" data-position="fixed" class="hdtitle">
+    <div class="ui-bar ui-bar-e" data-theme="{{datatheme}}">
+      <div class="row hdrow">
+        <div class="small-2 columns">&nbsp;</div>
+        <div class="small-8 columns" align="center"><img src="img/A_01_barcode/logo_top.png" id="bhlogo"></div>
+        <div class="small-2 columns"><img src="img/A_01_barcode/btn_enter.png" 
+				onmousedown="this.src='img/A_01_barcode/btn_enter_down.png';"
+				onmouseup="this.src='img/A_01_barcode/btn_enter.png'"
+				ontouchstart="this.src='img/A_01_barcode/btn_enter_down.png';"
+				ontouchend="this.src='img/A_01_barcode/btn_enter.png'"
+				onClick="pageLuncher('searchMap');" id="setting" /> </div>
+      </div>
+    </div>
+  </div>
+  <div data-role="content" data-theme="{{datatheme}}" id="mainbody">
+    <div class="wrapper" align="center">
+      <div class="row cameraBox" >
+        <div class="small-12" > 
+          
+          <!-- Camera Area View -->
+          <div class="camera_img" ><!-- sample --><img src="img/A_01_barcode/camera_sample.png" /></div>
+          <!-- //Camera Area View -->
+          
+          <div class="overFrame">
+            <div class="top" >
+              <p class="txt1">text text text text text </p>
+              <p class="txt2">wait for scan</p>
+            </div>
+            <div class="center" >
+              <div class="center_frm" ></div>
+            </div>
+            <div class="bottom" >
+              <dl>
+                <dt>TIP !</dt>
+                <dd> &bull; text text text text text text <br />
+                  &bull; text text text text text text </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Pop Up -->
+        <div id="angelBarcode-popup" class="popup" data-role="popup" >
+          <div>Text text text text .</div>
+          <input data-role='none' type="text" />
+        </div>
+        <!-- //Pop Up --> 
+        
+      </div>
+    </div>
+    <div data-role="footer" data-theme="{{datatheme}}" data-position="fixed" class="footerMenu" >
+      <div class="row" >
+        <div class="columns small-4" > <a href="#angelBarcode-popup" data-rel="popup" data-position-to="window" ><img src="img/A_01_barcode/A_01_barcode-01.png" id="menu1" 
+       			onmousedown="this.src='img/A_01_barcode/A_01_barcode-04.png';$('#menu2').attr('src','img/A_01_barcode/A_01_barcode-05_1.png');"
+				onmouseup="this.src='img/A_01_barcode/A_01_barcode-01.png';$('#menu2').attr('src','img/A_01_barcode/A_01_barcode-05.png');"
+				ontouchstart="this.src='img/A_01_barcode/A_01_barcode-04.png';$('#menu2').attr('src','img/A_01_barcode/A_01_barcode-05_1.png');;"
+				ontouchend="this.src='img/A_01_barcode/A_01_barcode-01.png';$('#menu2').attr('src','img/A_01_barcode/A_01_barcode-05.png');"
+         		onClick="pageLuncher('searchMain');"  /></a></div>
+        <div class="columns small-4" ><img src="img/A_01_barcode/A_01_barcode-05.png" id="menu2" onClick="pageLuncher('indexMain');" /></div>
+        <div class="columns small-4" ><img src="img/A_01_barcode/A_01_barcode-06.png" id="menu3" /></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

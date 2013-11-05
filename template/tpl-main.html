@@ -1,0 +1,622 @@
+<!--
+[mustache template : tpl-main.html]
+[Company : ActsOne co,. ltd]
+[Author : TaeShik Kim]
+[Date : 2013.8.15]
+[Version : 1.0]
+[License : MPL]
+This is the template for items in the booheart app for when the app loads
+-->
+
+<script id="mainM" type="text/html">
+<div data-role="page" data-theme="{{datatheme}}" id="indexMain">
+	<div data-role="header" data-theme="{{datatheme}}" data-position="fixed" class="hdtitle">
+		<div class="ui-bar ui-bar-e" data-theme="{{datatheme}}">
+			<div class="row hdrow">
+				<div class="small-2 columns">&nbsp;</div>
+				<div class="small-8 columns" align="center"><img src="{{bhlogo_top}}" id="bhlogo"></img></div>
+				<div class="small-2 columns"><img src="{{btnSetting}}" 
+				onmousedown="this.src='{{btnSetting_down}}';"
+				onmouseup="this.src='{{btnSetting}}'"
+				ontouchstart="this.src='{{btnSetting_down}}';"
+				ontouchend="this.src='{{btnSetting}}'"
+				onClick="pageLuncher('indexSetting');" id="setting"></img>
+			  </div>
+			</div>
+		</div>
+	</div>
+
+	<div data-role="content" data-theme="{{datatheme}}" id="mainbody">
+
+		<div class="barbg" align="center" style="background-image:url({{barbg}});">
+			<img id="barcodeimg" alt="Barcode Code128" src="http://dev.actsone.co.kr/booheart/barcode_gen/barcode.php?codetype=Code128&size=100&text=12345678">
+			<label id="barcodeNum">12345678</label>
+		</div>
+		<div class="nanumInfo" align="center">
+			<div class="row">
+				<div class="small-12 columns" align="center">
+					<label id="nanumT1">나눔 지수 : 174.37 </label><label id="nanumT2">원/1잔 (09시 기준)</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-12 columns" align="center">
+					<label id="nanumSubT">여러분의 참여로 1잔의 기부 가치가 올라갑니다.</label>
+				</div>
+			</div>
+		</div>
+		<div class="pointbg" align="center" style="background-image:url({{pointbg}});">
+			<div class="row">
+				<div class="row line1">
+					<div class="small-1 columns">&nbsp;</div>
+					<div class="small-2 columns"><img src="{{cup_fill}}" id="cup1" class="cupitem"></img></div>
+					<div class="small-2 columns"><img src="{{cup_fill}}" id="cup2" class="cupitem"></img></div>
+					<div class="small-2 columns"><img src="{{cup_fill}}" id="cup3" class="cupitem"></img></div>
+					<div class="small-2 columns"><img src="{{cup_empty}}" id="cup4" class="cupitem"></img></div>
+					<div class="small-2 columns"><img src="{{cup_empty}}" id="cup5" class="cupitem"></img></div>
+					<div class="small-1 columns">&nbsp;</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="row line2">
+					<div class="small-1 columns">&nbsp;</div>
+					<div class="small-2 columns cup"><img src="{{cup_fill}}" id="cup6" class="cupitem"></img></div>
+					<div class="small-2 columns cup"><img src="{{cup_empty}}" id="cup7" class="cupitem"></img></div>
+					<div class="small-2 columns cup"><img src="{{cup_empty}}" id="cup8" class="cupitem"></img></div>
+					<div class="small-2 columns cup"><img src="{{cup_empty}}" id="cup9" class="cupitem"></img></div>
+					<div class="small-2 columns cup"><img src="{{cup_empty}}" id="cup10" class="cupitem"></img></div>
+					<div class="small-1 columns">&nbsp;</div>
+				</div>
+			</div>
+		</div>
+		<div class="alertInfo">
+			<img src="{{info1}}" id="info1"></img>
+			<img src="{{info2}}" id="info2"></img>
+		</div>
+	</div>
+	<div data-role="footer" data-theme="{{datatheme}}" class="footerMenu" >
+		<img src="{{menu1}}" id="menu1" onClick="pageLuncher('searchMain');"></img>
+		<img src="{{menu2}}" id="menu2"></img>
+		<img src="{{menu3}}" id="menu3" onClick="pageLuncher('donateMain');"></img>
+	</div>
+
+</div>
+</script>
+
+<script id="searchMainM" type="text/html">
+<div data-role="page" data-theme="{{datatheme}}" id="searchMain">
+  <div data-role="header" data-theme="{{datatheme}}" data-position="fixed" class="hdtitle">
+    <div class="ui-bar ui-bar-e" data-theme="{{datatheme}}">
+      <div class="row hdrow">
+      	<div class="small-2 columns">&nbsp;</div>
+        <div class="small-8 columns" align="center"><img src="{{bhlogo_top}}" id="bhlogo"></div>
+        <div class="small-2 columns"><img src="{{btn_map}}" 
+				onmousedown="this.src='{{btn_map_down}}';"
+				onmouseup="this.src='{{btn_map}}'"
+				ontouchstart="this.src='{{btn_map_down}}';"
+				ontouchend="this.src='{{btn_map}}'"
+				onClick="pageLuncher('searchMap');" id="setting" /> </div>
+      </div>
+    </div>
+  </div>
+  <div data-role="content" data-theme="{{datatheme}}" id="mainbody">
+	<div class="wrapper" >
+	  <div class="row" id="seachBox">
+		<div class="small-12 columns">
+		  <input type="text" name="search" data-theme="{{datatheme}}" value="" />
+		  <img src="{{btn_search}}"              
+				onmousedown="this.src='{{btn_search_down}}';"
+				onmouseup="this.src='{{btn_search}}'"
+				ontouchstart="this.src='{{btn_search_down}}';"
+				ontouchend="this.src='{{btn_search}}'"
+				onClick="" id="btn_search"> </div>
+	  </div>
+	  <div class="row search-result" id="search-result" >
+		<div class="row" >
+		  <div class="column small-1 icon" ><img src="{{bullet_a}}" /></div>
+		  <div class="column small-9 txt" ><a href="#" onClick="pageLuncher('searchInfo');">바우 하우스</a></div>
+		  <div class="column small-2 num" >100m</div>
+		</div>
+		<div class="row" >
+		  <div class="column small-1 icon" ><img src="{{bullet_b}}" /></div>
+		  <div class="column small-9 txt" ><a href="#" onClick="pageLuncher('searchInfo');">밥먹는 카페</a></div>
+		  <div class="column small-2 num" >200m</div>
+		</div>
+		<div class="row" >
+		  <div class="column small-1 icon" ><img src="{{bullet_c}}" /></div>
+		  <div class="column small-9 txt" ><a href="#" onClick="pageLuncher('searchInfo');">카페 꼼마</a></div>
+		  <div class="column small-2 num" >250m</div>
+		</div>
+		<div class="row" >
+		  <div class="column small-1 icon" ><img src="{{bullet_d}}" /></div>
+		  <div class="column small-9 txt" ><a href="#" onClick="pageLuncher('searchInfo');">405 키친</a></div>
+		  <div class="column small-2 num" >300m</div>
+		</div>
+		<div class="row" >
+		  <div class="column small-1 icon" ><img src="{{bullet_e}}" /></div>
+		  <div class="column small-9 txt" ><a href="#" onClick="pageLuncher('searchInfo');">츄로101 (홍대점)</a></div>
+		  <div class="column small-2 num" >300m</div>
+		</div>
+		<div class="row" >
+		  <div class="column small-1 icon" ><img src="{{bullet_f}}" /></div>
+		  <div class="column small-9 txt" ><a href="#" onClick="pageLuncher('searchInfo');">공차</a></div>
+		  <div class="column small-2 num" >400m</div>
+		</div>
+		<div class="row" >
+		  <div class="column small-1 icon" ><img src="{{bullet_g}}" /></div>
+		  <div class="column small-9 txt" ><a href="#" onClick="pageLuncher('searchInfo');">커피랩</a></div>
+		  <div class="column small-2 num" >600m</div>
+		</div>
+		<div class="row" >
+		  <div class="column small-1 icon" ><img src="{{bullet_h}}" /></div>
+		  <div class="column small-9 txt" >카페 소스</div>
+		  <div class="column small-2 num" >700m</div>
+		</div>
+		<div class="row" >
+		  <div class="column small-1 icon" ><img src="{{bullet_i}}" /></div>
+		  <div class="column small-9 txt" >더 옐로우</div>
+		  <div class="column small-2 num" >1km</div>
+		</div>
+		<div class="row" >
+		  <div class="column small-1 icon" ><img src="{{bullet_j}}" /></div>
+		  <div class="column small-9 txt" >마망갸또 (홍대점)</div>
+		  <div class="column small-2 num" >1.3km</div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <div data-role="footer" data-theme="{{datatheme}}" class="footerMenu" >
+	<img src="{{menu1}}" id="menu1"></img>
+	<img src="{{menu2}}" id="menu2" onClick="pageLuncher('indexMain');"></img>
+	<img src="{{menu3}}" id="menu3" onClick="pageLuncher('donateMain');"></img>
+  </div>
+</div>
+</script>
+
+<script id="searchInfoM" type="text/html">
+<div data-role="page" data-theme="{{datatheme}}" id="searchInfo">
+  <div data-role="header" data-theme="{{datatheme}}" data-position="fixed" class="hdtitle">
+    <div class="ui-bar ui-bar-e" data-theme="{{datatheme}}">
+      <div class="row hdrow">
+        <div class="small-2 columns" ><img src="{{btn_back}}" 
+				onmousedown="this.src='{{btn_back_down}}';"
+				onmouseup="this.src='{{btn_back}}'"
+				ontouchstart="this.src='{{btn_back_down}}';"
+				ontouchend="this.src='{{btn_back}}'"
+				onClick="history.back(); return false;" id="hdBack" /></div>
+        <div class="small-8 columns" align="center"><img src="{{bhlogo_top}}" id="bhlogo"></div>
+        <div class="small-2 columns"><img src="{{btn_map}}" 
+				onmousedown="this.src='{{btn_map_down}}';"
+				onmouseup="this.src='{{btn_map}}'"
+				ontouchstart="this.src='{{btn_map_down}}';"
+				ontouchend="this.src='{{btn_map}}'"
+				onClick="pageLuncher('searchMap');" id="setting" /> </div>
+      </div>
+    </div>
+  </div>
+  <div data-role="content" data-theme="{{datatheme}}" id="mainbody">
+    <div class="wrapper" >
+      <div class="row search-result" id="search-result" >
+        
+        <div class="row infoTop" >
+          <div class="column small-4 icon" ><img src="{{logo(sample)}}" /></div>
+          <div class="column small-8 num" >
+            <dl>
+              <dt>커피 랩</dt>
+              <dd>서울시 마포구 서교동 327-19 <br />
+                02-326-1998</dd>
+            </dl>
+          </div>
+        </div>
+        
+        <div class="infoDetail" >
+        	<p><strong>영업시간</strong> : 일~목:오전 11시~자정(금,토:~새벽1시)</p>
+            <p><strong>인기메뉴</strong> : 아메리카노 4,000원, 카페라테 4,500원, 카페모카 5,000원 </p>
+            <p><strong>상세설명</strong> : 챔피언 바리스타 방종구씨의 커피 실험실. 예술의 전당 내 카페 바우하우스에서 국내 정상급 바리스타로 명성을 얻었던 방종구씨가 자신만의 개성을 펼치기 위해 오픈한 카페입니다. 천장을 가득 매운 공중의자 등 커피만큼이나 인테리어도 특색있다고 하지요. 맥주와 에스프레소를 결합한 성인용 커피 등 방종구씨의 창작 음료를 즐길 수 있습니다.</p>
+        
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" class="footer" data-theme="{{datatheme}}">
+    <div class="wrapper" >
+      <div class="row" >
+        <div class="column small-4"><img src="{{photo(sample)}}" /></div>
+        <div class="column small-4" ><img src="{{photo(sample)}}" /></div>
+        <div class="column small-4"><img src="{{photo(sample)}}" /></div>
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+
+<script id="searchMapM" type="text/html">
+<div data-role="page" data-theme="{{datatheme}}" id="searchMap">
+  <div data-role="header" data-theme="{{datatheme}}" data-position="fixed" class="hdtitle">
+    <div class="ui-bar ui-bar-e" data-theme="{{datatheme}}">
+      <div class="row hdrow">
+        <div class="small-2 columns" ><img src="{{btn_back}}" 
+				onmousedown="this.src='{{btn_back_down}}';"
+				onmouseup="this.src='{{btn_back}}'"
+				ontouchstart="this.src='{{btn_back_down}}';"
+				ontouchend="this.src='{{btn_back}}'"
+				onClick="history.back(); return false;" id="hdBack" /></div>
+        <div class="small-8 columns" align="center"><img src="{{bhlogo_top}}" id="bhlogo"></div>
+        <div class="small-2 columns">&nbsp;</div>
+      </div>
+    </div>
+  </div>
+  <div data-role="content" data-theme="{{datatheme}}" id="mainbody">
+    <div class="wrapper" >
+      <div class="mapBox" >
+        	<div class="mapTop" width="100%"><img src="{{shade_top}}" /></div>
+            <div class="mapContent" style="width:100%;height:100%"><iframe id="iframeMap" style="width:100%;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps?sll=37.06246945326879,-95.76238145566178&amp;sspn=77.50195445425038,103.33093507663412&amp;t=m&amp;q=Japan,+T%C5%8Dky%C5%8D-to,+Arakawa-ku,+Arakawa,+%EF%BC%93%E4%B8%81%E7%9B%AE%EF%BC%96%EF%BC%91%E2%88%92%EF%BC%96+%E4%B8%AD%E8%8F%AF%E3%81%9D%E3%81%B0+%E4%BA%8C%E4%BB%A3%E7%9B%AE%E3%81%AB%E3%82%83%E3%81%8C%E3%81%AB%E3%82%83%E3%81%8C%E4%BA%AD&amp;dg=opt&amp;ie=UTF8&amp;hq=%EF%BC%93%E4%B8%81%E7%9B%AE%EF%BC%96%EF%BC%91%E2%88%92%EF%BC%96+%E4%B8%AD%E8%8F%AF%E3%81%9D%E3%81%B0+%E4%BA%8C%E4%BB%A3%E7%9B%AE%E3%81%AB%E3%82%83%E3%81%8C%E3%81%AB%E3%82%83%E3%81%8C%E4%BA%AD&amp;hnear=Arakawa,+Tokyo,+Nh%E1%BA%ADt+B%E1%BA%A3n&amp;ll=35.733402,139.779294&amp;spn=0.013878,0.006295&amp;output=embed"></iframe>
+            </div>
+            <div class="mapBottom"><img src="{{shade_bottom}}" /></div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</script>
+
+<script id="donationMainM" type="text/html">
+<div data-role="page" data-theme="{{datatheme}}" id="donateMain">
+  <div data-role="header" data-theme="{{datatheme}}" data-position="fixed" class="hdtitle">
+    <div class="ui-bar ui-bar-e" data-theme="{{datatheme}}">
+      <div class="row hdrow">
+        <div class="small-2 columns">&nbsp;</div>
+        <div class="small-8 columns" align="center"><img src="{{bhlogo_top}}" id="bhlogo"></div>
+        <div class="small-2 columns"><img src="{{btn_map}}" 
+				onmousedown="this.src='{{btn_map_down}}';"
+				onmouseup="this.src='{{btn_map}}'"
+				ontouchstart="this.src='{{btn_map_down}}';"
+				ontouchend="this.src='{{btn_map}}'"
+				onClick="pageLuncher('searchMap');" id="setting" /> </div>
+      </div>
+    </div>
+  </div>
+  <div data-role="content" data-theme="{{datatheme}}" id="mainbody">
+    <div class="wrapper" align="center">
+      <div class="row banner" align="center">
+        <p><img src="{{banner_img(sample)}}" onClick="pageLuncher('donateInfo');"/></p>
+        <p class="shade"><img src="{{banner_shade}}"  onClick="pageLuncher('donateInfo');"/></p>
+      </div>
+      <div class="row banner">
+        <p><img src="{{banner_img(sample)}}" onClick="pageLuncher('donateInfo');"/></p>
+        <p class="shade"><img src="{{banner_shade}}"  onClick="pageLuncher('donateInfo');"/></p>
+      </div>
+      <div class="row banner">
+        <p><img src="{{banner_img(sample)}}" onClick="pageLuncher('donateInfo');"/></p>
+        <p class="shade"><img src="{{banner_shade}}"  onClick="pageLuncher('donateInfo');"/></p>
+      </div>
+      <div class="row banner">
+        <p><img src="{{banner_img(sample)}}" onClick="pageLuncher('donateInfo');"/></p>
+        <p class="shade"><img src="{{banner_shade}}"  onClick="pageLuncher('donateInfo');"/></p>
+      </div>
+    </div>
+  </div>
+  <div data-role="footer" data-theme="{{datatheme}}" data-position="fixed" class="footerMenu" >
+	  <img src="{{menu1}}" id="menu1" onClick="pageLuncher('searchMain');"></img>
+	  <img src="{{menu2}}" id="menu2" onClick="pageLuncher('indexMain');"></img>
+	  <img src="{{menu3}}" id="menu3" ></img>
+  </div>
+</div>
+</script>
+
+<script id="donationInfoM" type="text/html">
+<div data-role="page" data-theme="{{datatheme}}" id="donateInfo">
+  <div data-role="header" data-theme="{{datatheme}}" data-position="fixed" class="hdtitle">
+    <div class="ui-bar ui-bar-e" data-theme="{{datatheme}}">
+      <div class="row hdrow">
+        <div class="small-2 columns" ><img src="{{btn_back}}" 
+				onmousedown="this.src='{{btn_back_down}}';"
+				onmouseup="this.src='{{btn_back}}'"
+				ontouchstart="this.src='{{btn_back_down}}';"
+				ontouchend="this.src='{{btn_back}}'"
+				onClick="history.back(); return false;" id="hdBack" /></div>
+        <div class="small-8 columns" align="center"><img src="{{bhlogo_top}}" id="bhlogo"></div>
+        <div class="small-2 columns">&nbsp;</div>
+      </div>
+    </div>
+  </div>
+  <div data-role="content" data-theme="{{datatheme}}" id="mainbody">
+    <div class="wrapper" >
+      <dl>
+        <dt>사랑나눔 김장행사</dt>
+        
+        <dd class="imgBox" >
+          <p class="top"><img src="{{donateimg(sample)}}" /></p>
+          <div class="bottom">
+			<div class="row" >
+             	<div class="progress_bar small-12"><div class="meter_bar" id="meter" style="width: 40%">&nbsp;</div><span class="text" >목표 500만원 / 20% 달성</span></div>  
+            </div>
+            <img src="{{btn_donate}}" align="center"
+                onmousedown="this.src='{{btn_donate_down}}';"
+				onmouseup="this.src='{{btn_donate}}'"
+				ontouchstart="this.src='{{btn_donate_down}}';"
+				ontouchend="this.src='{{btn_donate}}'"
+				onClick="history.back(); return false;" id="donateBtn" /></p>
+            <p class="donaPopup" style="display:none"><img src="{{donate_popup}}" /></p>
+          </div>
+        </dd>
+        
+        <dd class="txt">
+        	<p>얼마전 입동을 지나 향기로운 집에도 겨울이 찾아오고 있습니다. 저희 향기로운집에서는 겨울을 맞이하여 연례 행사인 김장을 담그려고 합니다.</p>
+            <p>올해에는 배추 1,000여 포기로 작년보다 많은 양의 김장을 담글 예정인데요. 그래서 부모님들의 참여가 꼭 필요합니다. 바쁘시더라도 꼭 참석하시어 향기가족들의 1년간 먹을 김치를 같이 담그어 주시면 감사하겠습니다. 궁금한 사항이 있을 시 031)632-0000 으로 전화주세요.</p>
+        
+        </dd>
+      </dl>
+      
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" align="center" class="footer" data-theme="{{datatheme}}">
+	<img src="{{bg_shade_text}}" data-theme="{{datatheme}}" />
+  </div>
+</div>
+</script>
+
+<script id="settingM" type="text/html">
+<div data-role="page" data-theme="{{datatheme}}" id="indexSetting">
+	<div data-role="header" data-theme="{{datatheme}}" data-position="fixed" class="hdtitle">
+		<div class="ui-bar ui-bar-e" data-theme="{{datatheme}}">
+			<div class="row hdrow">
+			  <div class="small-2 columns"><img src="{{btnback}}" 
+				onmousedown="this.src='{{btnback_down}}';"
+				onmouseup="this.src='{{btnback}}'"
+				ontouchstart="this.src='{{btnback_down}}';"
+				ontouchend="this.src='{{btnback}}'"
+				onClick="history.back(); return false;" id="hdBack"></img>
+			  </div>
+			  <div class="small-8 columns" align="center"><img src="{{bhlogo_top}}" id="bhlogo"></img></div>
+	          <div class="small-2 columns">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<div data-role="content" data-theme="{{datatheme}}" id="mainbody">
+		<div class="wrapper" >
+			<div class="settingList" >
+				<div class="row item btn" style="background: url('{{bar}}') bottom no-repeat;">
+					<div class="columns small-8 txt" >로그아웃</div>
+					<div class="columns small-4 icon" ><img src="{{btn_logout}}" /></div>
+				</div>
+				<div class="row item btn"  style="background: url('{{bar}}') bottom no-repeat;">
+					<div class="columns small-8 txt" >푸시 알림</div>
+					<div class="columns small-4 icon" ><img src="{{btn_push_on}}" /></div>
+				</div>
+				<div class="row item"  style="background: url('{{bar}}') bottom no-repeat;">
+					<div class="columns small-10 txt" >나의 기부활동 내역</div>
+					<div class="columns small-2 icon" ><img src="{{expand_right}}" onClick="pageLuncher('settingsPoint');"/></div>
+				</div>
+				<div class="row item"  style="background: url('{{bar}}') bottom no-repeat;">
+					<div class="columns small-10 txt" >공지사항</div>
+					<div class="columns small-2 icon" ><img src="{{expand_right}}" onClick="pageLuncher('settingsNotice');"/></div>
+				</div>
+				<div class="row item"  style="background: url('{{bar}}') bottom no-repeat;">
+					<div class="columns small-10 txt" >부하트 FAQ</div>
+					<div class="columns small-2 icon" ><img src="{{expand_right}}" onClick="pageLuncher('settingsFaq');"/></div>
+				</div>
+				<div class="row item"  style="background: url('{{bar}}') bottom no-repeat;">
+					<div class="columns small-10 txt" >직접 문의하기</div>
+					<div class="columns small-2 icon" ><img src="{{expand_right}}" /></div>
+				</div>
+				<div class="row item"  style="background: url('{{bar}}') bottom no-repeat;">
+					<div class="columns small-10 txt" >카카오톡으로 친구초대</div>
+					<div class="columns small-2 icon" ><img src="{{expand_right}}" /></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-role="footer" data-position="fixed" align="center" class="footer" data-theme="{{datatheme}}">
+		<img src="{{bg_shade_text}}" />
+	</div>
+</div>
+
+</script>
+
+<script id="settingFaqM" type="text/html">
+<div data-role="page" data-theme="{{datatheme}}" id="settingsFaq">
+  <div data-role="header" data-theme="{{datatheme}}" data-position="fixed" class="hdtitle">
+    <div class="ui-bar ui-bar-e" data-theme="{{datatheme}}">
+      <div class="row hdrow">
+        <div class="small-2 columns" ><img src="{{btn_back}}" 
+				onmousedown="this.src='{{btn_back_down}}';"
+				onmouseup="this.src='{{btn_back}}'"
+				ontouchstart="this.src='{{btn_back_down}}';"
+				ontouchend="this.src='{{btn_back}}'"
+				onClick="history.back(); return false;" id="hdBack" /></div>
+        <div class="small-8 columns" align="center"><img src="{{bhlogo_top}}" id="bhlogo"></div>
+        <div class="small-2 columns">&nbsp;</div>
+      </div>
+    </div>
+  </div>
+  <div data-role="content" data-theme="{{datatheme}}" id="mainbody">
+    <div class="wrapper" >
+      <div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-inset="false" >
+        <div data-role="collapsible" class="faqItem">
+          <h2>부하트란?</h2>
+          <div data-role="listview"> FAQ 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 </div>
+        </div>
+        
+        <div data-role="collapsible" class="faqItem">
+          <h2>기부는 어떻게 하나요?</h2>
+          <div data-role="listview"> FAQ 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트 </div>
+        </div>
+        
+        <div data-role="collapsible" class="faqItem">
+          <h2>탈퇴는 어떻게 하나요?</h2>
+          <div data-role="listview"> FAQ 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트 </div>
+        </div>
+        <div data-role="collapsible" class="faqItem">
+          <h2>부하트란?</h2>
+          <div data-role="listview"> FAQ 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 </div>
+        </div>
+        <div data-role="collapsible" class="faqItem">
+          <h2>포인트 정립 방법</h2>
+          <div data-role="listview"> 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 </div>
+        </div>
+        <div data-role="collapsible" class="faqItem">
+          <h2>포인트란 무엇인가요?</h2>
+          <div data-role="listview"> 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 </div>
+        </div>
+        <div data-role="collapsible" class="faqItem">
+          <h2>포인트를 나눠줄 수 있나요?</h2>
+          <div data-role="listview"> 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 </div>
+        </div>
+        <div data-role="collapsible" class="faqItem">
+          <h2>적립 포인트가 없어졌어요.</h2>
+          <div data-role="listview"> 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 </div>
+        </div>
+        <div data-role="collapsible" class="faqItem">
+          <h2>신촌에는 가맹점이 없나요?</h2>
+          <div data-role="listview"> 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 </div>
+        </div>
+        <div data-role="collapsible" class="faqItem">
+          <h2>앱 실행이 안되요.</h2>
+          <div data-role="listview"> 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 </div>
+        </div>
+        <div data-role="collapsible" class="faqItem">
+          <h2>친구에게 소개시켜 주려면.</h2>
+          <div data-role="listview"> 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스 </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" align="center" class="footer" data-theme="{{datatheme}}">
+	<img src="{{bg_shade_text}}" />
+  </div>
+</div>
+</script>
+
+<script id="settingNoticeM" type="text/html">
+<div data-role="page" data-theme="{{datatheme}}" id="settingsNotice">
+  <div data-role="header" data-theme="{{datatheme}}" data-position="fixed" class="hdtitle">
+    <div class="ui-bar ui-bar-e" data-theme="{{datatheme}}">
+      <div class="row hdrow">
+        <div class="small-2 columns" ><img src="{{btn_back}}" 
+				onmousedown="this.src='{{btn_back_down}}';"
+				onmouseup="this.src='{{btn_back}}'"
+				ontouchstart="this.src='{{btn_back_down}}';"
+				ontouchend="this.src='{{btn_back}}'"
+				onClick="history.back(); return false;" id="hdBack" /></div>
+        <div class="small-8 columns" align="center"><img src="{{bhlogo_top}}" id="bhlogo"></div>
+        <div class="small-2 columns">&nbsp;</div>
+      </div>
+    </div>
+  </div>
+  <div data-role="content" data-theme="{{datatheme}}" id="mainbody">
+    <div class="wrapper" >
+      	<div class="noticeList" style="background:url({{bar}}) bottom no-repeat;">
+        	<div class="row item " style="background:url({{bar}}) bottom no-repeat;">
+            	<p>
+                	2013.07.23 <br />
+                    <strong>부하트가 새롭게 업데이트 되었습니다.</strong>
+                </p>
+                <p>안녕하세요, 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트            
+                </p>
+            </div>
+            
+            <div class="row item " style="background:url({{bar}}) bottom no-repeat;">
+            	<p>
+                	2013.07.04 <br />
+                    <strong>정기 점검 안내</strong>
+                </p>
+                <p>안녕하세요, 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트            
+                </p>
+            </div>
+            
+            <div class="row item " style="background:url({{bar}}) bottom no-repeat;">
+            	<p>
+                	2013.07.01 <br />
+                    <strong>부하트 서비스 오픈</strong>
+                </p>
+                <p>안녕하세요, 샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트샘플 텍스트            
+                </p>
+            </div>
+        	
+        </div>
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" align="center" class="footer" data-theme="{{datatheme}}">
+	<img src="{{bg_shade_text}}" />
+  </div>
+</div>
+</script>
+
+<script id="settingPointM" type="text/html">
+<div data-role="page" data-theme="{{datatheme}}" id="settingsPoint">
+  <div data-role="header" data-theme="{{datatheme}}" data-position="fixed" class="hdtitle">
+    <div class="ui-bar ui-bar-e" data-theme="{{datatheme}}">
+      <div class="row hdrow">
+        <div class="small-2 columns" ><img src="{{btn_back}}" 
+				onmousedown="this.src='{{btn_back_down}}';"
+				onmouseup="this.src='{{btn_back}}'"
+				ontouchstart="this.src='{{btn_back_down}}';"
+				ontouchend="this.src='{{btn_back}}'"
+				onClick="history.back(); return false;" id="hdBack" /></div>
+        <div class="small-8 columns" align="center"><img src="{{bhlogo_top}}" id="bhlogo"></div>
+        <div class="small-2 columns">&nbsp;</div>
+      </div>
+    </div>
+  </div>
+  <div data-role="content" data-theme="{{datatheme}}" id="mainbody">
+    <div class="wrapper" >
+      <div class="noticeList" >
+        <div class="item top" style="background:url({{bar}}) bottom no-repeat;">
+          <div class="row" >
+            <div class="columns small-5 txtL" >현재 포인트</div>
+            <div class="columns small-7 txtR" >2,550 점</div>
+          </div>
+          <div class="row" >
+            <div class="columns small-5 txtL" >누적 포인트</div>
+            <div class="columns small-7 txtR" >12,600 점</div>
+          </div>
+        </div>
+
+        <div class="item" style="background:url({{bar}}) bottom no-repeat;">
+			<div class="itemdata">
+				<div class="title">희망 고아원</div>
+				<div class="point">2013.07.22 / 2,180 점</div>
+			</div>
+			<div class="itemdata">
+				<div class="title">희망 고아원</div>
+				<div class="point">2013.07.21 / 2,120 점</div>
+			</div>
+			<div class="itemdata">
+				<div class="title">청년 해비타트</div>
+				<div class="point">2013.07.21 / 2,000 점<p/></div>
+			</div>
+			<div class="itemdata">
+				<div class="title">희망 고아원</div>
+				<div class="point">2013.06.22 / 2,180 점<p/></div>
+			</div>
+			<div class="itemdata">
+				<div class="title">희망 고아원</div>
+				<div class="point">2013.06.21 / 2,120 점<p/></div>
+			</div>
+			<div class="itemdata">
+				<div class="title">청년 해비타트</div>
+				<div class="point">2013.06.21 / 2,000 점<p/></div>
+			</div>
+			<div class="itemdata">
+				<div class="title">희망 고아원</div>
+				<div class="point">2013.05.22 / 2,180 점<p/></div>
+			</div>
+			<div class="itemdata">
+				<div class="title">희망 고아원</div>
+				<div class="point">2013.05.21 / 2,120 점<p/></div>
+			</div>
+			<div class="itemdata">
+				<div class="title">청년 해비타트</div>
+				<div class="point">2013.05.21 / 2,000 점<p/></div>
+			</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" align="center" class="footer" data-theme="{{datatheme}}">
+	<img src="{{bg_shade_text}}" />
+  </div>
+</div>
+</script>

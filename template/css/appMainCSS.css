@@ -1,0 +1,271 @@
+input:focus {
+	outline: none;
+}
+
+
+@media only screen and (max-width: 319px) {
+}
+
+/* Smartphones (portrait: 320x480) ----------- */
+@media only screen and (min-width: 320px) and (max-width : 480px) {
+	.hdrow {
+		display:table;
+		vertical-align:middle; 
+		margin-top:0.5em; 
+		margin-bottom:1em;
+	}
+	#hdleftbtn {
+		width:20px;
+		vertical-align:middle;
+		margin-top:0.5em;
+	}
+	#bhlogo {
+		width:120px;
+		vertical-align:middle;
+		text-align:center;
+		margin-left:-3em;
+	}
+	.items {
+		margin-top: 1em;
+	}
+	.item {
+		display: table;
+		font-size: 0.75em;
+		margin-top: 0.5em;
+	}
+	.item .lblitem {
+		font-size:0.75em;
+		margin-top: 1.25em;
+	}
+	.info {
+		font-size: 0.75em;
+	}
+	.e_reg {
+		width:150px;
+		margin-top:1em;
+	}
+}
+
+/* Smartphones (portrait: 480x800) ----------- */
+@media only screen and (min-width: 480px) and (max-width: 800px) {
+	.hdrow {
+		display:table;
+		vertical-align:middle; 
+		margin-top:1em; 
+		margin-bottom:2em;
+	}
+	#hdleftbtn {
+		width:20px;
+		vertical-align:middle;
+		margin-top:1em;
+	}
+	#bhlogo {
+		width:180px;
+		vertical-align:middle;
+		text-align:center;
+		margin-left:-5em;
+	}
+	.items {
+		margin-top: 3em;
+	}
+	.item {
+		display: table;
+		font-size: 1em;
+		margin-top: 1em;
+	}
+	.item .lblitem {
+		margin-top: 1.25em;
+	}
+	.info {
+		font-size: 0.75em;
+	}
+	.e_reg {
+		width:300px;
+		margin-top:1em;
+	}
+}
+
+/* Smartphones (portrait: 640x960(iphone4s), 640x1136(iphone5)) ----------- /
+/ Other Notation : iPhone 5 Retina regardless of IOS version 
+@media (device-height : 568px) 
+and (device-width : 320px) 
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation : todo: you can add orientation or delete this comment) {
+} 
+*/
+@media only screen and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+	.hdrow {
+		display:table;
+		vertical-align:middle; 
+		margin-top:2em; 
+		margin-bottom:3em;
+	}
+	#hdleftbtn {
+		vertical-align:middle;
+		margin-top:1em;
+	}
+	#bhlogo {
+		width:295px;
+		text-align:center;
+		margin-left:-5em;
+	}
+	.items {
+		margin-top: 3em;
+	}
+	.item {
+		display: float;
+		font-size: 1em;
+		margin-top: 2em;
+	}
+	.item .lblitem {
+		margin-top: 1.25em;
+	}
+	.e_reg {
+		width:480px;
+	}
+}
+
+/* Smartphones (portrait: 720x1280(Galaxy s3))& 800x1280(Galaxy 10.1) or other tablet ----------- */
+@media only screen and (min-width: 720px) {
+	.hdrow {
+		/*display:table;*/
+		vertical-align:middle; 
+		margin-top:2em; 
+		margin-bottom:2em;
+	}
+	#setting {
+		margin-left:1em;
+	}
+	#bhlogo {
+		width:295px;
+		text-align:center;
+		margin-left:5em;
+		margin-top:-1em;
+	}
+	#mainbody {
+		border:0px;
+	}
+	.barbg {
+		display:relative;
+		background-repeat:no-repeat;
+		background-position:center; 
+		height:350px;
+		margin-top:3em;
+	}
+	#barcodeimg {
+		margin-top:3em;
+		width:75%;
+		height:170px;
+	}
+	#barcodeNum {
+		font-size:2em;
+		margin-top:0.5em;
+	}
+	.nanumInfo {
+		margin-top:1em;
+		height:100px;
+	}
+	#nanumT1 {
+		font-size: 2em;
+		display:inline;
+	}
+	#nanumT2 {
+		font-size: 1em;
+		display:inline;
+	}
+	#nanumSubT {
+		margin-top: 1em;
+	}
+	.pointbg {
+		display:relative;
+		background-repeat:no-repeat;
+		background-position:center; 
+		height:220px;
+		width:100%;
+	}
+	.cup {
+
+		margin-top:1.25em;
+	}
+	.line1 {
+		margin-top:2em;
+	}
+	.line2 {
+		margin-top:5em;
+	}
+	.cupitem {
+		position:absolute;
+		width:80%;
+	}
+	#cup1, #cup6 {
+		margin-left: -25px;
+	}
+	#cup2, #cup7 {
+		margin-left: -10px;
+	}
+	#cup3, #cup8 {
+		margin-left: 5px;
+	}
+	#cup4, #cup9 {
+		margin-left: 30px;
+	}
+	#cup5, #cup10 {
+		margin-left: -60px;
+	}
+	.footer {
+		margin-top:4em;
+	}
+	.alertInfo {
+		display: none;
+	}
+	#info1 {
+		position: absolute;
+		left: 40px;
+		top: 170px;
+	}
+	#info2 {
+		position: absolute;
+		left: 40px;
+		top: 680px;
+	}
+
+}
+
+@media only screen and (min-width: 800px) {
+	.cup {
+		margin-top:1em;
+	}
+	.line2 {
+		margin-top:5.5em;
+	}
+	.cupitem {
+		position:absolute;
+		width:80%;
+	}
+	#cup1, #cup6 {
+		margin-left: -10px;
+	}
+	#cup2, #cup7 {
+		margin-left: 5px;
+	}
+	#cup3, #cup8 {
+		margin-left: 5px;
+	}
+	#cup4, #cup9 {
+		margin-left: 20px;
+	}
+	#cup5, #cup10 {
+		margin-left: -80px;
+	}
+	#info1 {
+		position: absolute;
+		left: 75px;
+		top: 170px;
+	}
+	#info2 {
+		position: absolute;
+		left: 75px;
+		top: 680px;
+	}
+
+}

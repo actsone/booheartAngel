@@ -1,0 +1,117 @@
+body {
+	background-color: #FDFDFA !important;
+}
+.ui-page, .ui-page-theme-b, .ui-page-active, .ui-panel-wrapper {
+	background-color: #FDFDFA !important;
+}
+input:focus {
+	outline: none;	
+}
+.hdrow {
+	vertical-align:middle; 
+}	
+.hdtitle {
+	background: #FDFDFA;
+	border:none;
+	text-align:center;
+	vertical-align:middle; 
+	top: 0;
+	padding-top: 0;
+}
+.ui-header-fixed.ui-fixed-hidden {
+	position:fixed;
+}
+.footerMenu {
+	background: #FDFDFA;
+	border:none;
+	display:inline-table;
+	position:fixed;
+	bottom: 0;
+	padding-bottom: 0;
+}
+.ui-page .ui-footer-fixed.ui-fixed-hidden {
+	display:inline-table;
+}
+.footer {
+	background: #FDFDFA;
+	border:none;
+	/*vertical-align:middle;*/
+}
+#bhlogo {
+	text-align:center;		
+}
+#mainbody {
+	border:0;
+	background-color: #FDFDFA;
+}
+#menu1 {
+	width:20%;
+}
+#menu2 {
+	width:60%;
+}
+#menu3 {
+	width:20%;
+}
+#mainbody a:link,  #mainbody a:visited {
+	text-decoration:none;
+	font-weight: normal;
+	color:#594a42;
+	background-color:#FDFDFA;
+}
+.textlink:link, .textlink:visited {
+	color:#594a42;
+}
+
+@media only screen and (min-width: 320px) and (max-width : 359px) {
+	.hdrow {
+		margin-top:0.5em; 
+		margin-bottom:0.5em;
+	}
+	#bhlogo {
+		width:295px;
+	}	
+	#hdBack 
+	{
+		margin-top:0.75em;
+	}	
+	#setting {
+		margin-top: 0.75em;
+		margin-left:1em;
+	}
+}
+
+@media only screen and (min-width: 360px) and (max-width : 480px) {
+	.hdrow {
+		margin-top:0.5em; 
+		margin-bottom:0.5em;
+	}
+	#bhlogo {
+		width:295px;
+	}	
+	#hdBack 
+	{
+		margin-top:0.75em;
+	}	
+	#setting {
+		margin-top: 0.75em;
+		margin-left:1em;
+	}
+}
+
+@media only screen and (min-width: 720px) {
+	.hdrow {
+		/*display:table;*/
+		vertical-align:middle; 
+		margin-top:2em; 
+		margin-bottom:1.5em;
+	}
+	#bhlogo {
+		width:295px;
+		margin-top:-1em;
+	}	
+	#setting {
+		margin-left:1em;
+	}
+	
+}

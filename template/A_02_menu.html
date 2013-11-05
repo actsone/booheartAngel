@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>booHeart</title>
+<link rel="stylesheet" href="css/jquery.mobile-1.4.0-alpha.1.min.css" />
+<link rel="stylesheet" href="css/foundation.css">
+<link rel="stylesheet" href="A_02_menu.css">
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/jquery.mobile-1.4.0-alpha.1.min.js"></script>
+<script src="js/vendor/custom.modernizr.js"></script>
+<script >
+	$(document).ready(function(e) {
+        $("#angelMenu .item .col-minus").click(function(e) {
+            num_val = Number($(this).parent(this).find('input').val())-1;			
+			$(this).parent(this).find('input').val(num_val);
+        });
+		$("#angelMenu .item .col-plus").click(function(e) {
+            num_val = Number($(this).parent(this).find('input').val())+1;			
+			$(this).parent(this).find('input').val(num_val);
+        });
+    });
+</script>
+</head>
+<body>
+<div data-role="page" data-theme="{{datatheme}}" id="angelMenu">
+<div data-role="header" data-theme="{{datatheme}}" data-position="fixed" class="hdtitle">
+  <div class="ui-bar ui-bar-e" data-theme="{{datatheme}}">
+    <div class="row hdrow">
+      <div class="small-2 columns">&nbsp;</div>
+      <div class="small-8 columns" align="center"><img src="img/A_02_menu/logo_top.png" id="bhlogo"></div>
+      <div class="small-2 columns">&nbsp;</div>
+    </div>
+  </div>
+</div>
+<div data-role="content" data-theme="{{datatheme}}" id="mainbody">
+  <div class="wrapper" align="center">
+    <!-- Content Top -->
+    <div class="row content-head1" >
+      <div class="columns small-5 col1" > ID </div>
+      <div class="columns small-7 col2" > 2647468768787 </div>
+    </div>
+    <div class="row content-head2" >
+      <div class="columns small-4" > Title </div>
+      <div class="columns small-2" > HOT </div>
+      <div class="columns small-2" > COLD </div>
+      <div class="columns small-4" > Num </div>
+    </div>
+    <!-- //Content Top --> 
+    
+    <!-- Content Items -->
+    
+    <!-- item 1 -->
+    <div class="row item" >
+      <div class="columns small-4 col-tit" > Title Text </div>
+      <div class="columns small-2 col-hot" data-role="controlgroup" >
+        <label>
+          <input type="checkbox" />
+        </label>
+      </div>
+      <div class="columns small-2 col-cold" data-role="controlgroup" >
+        <label>
+          <input type="checkbox" />
+        </label>
+      </div>
+      <div class="columns small-4 col-num" >
+        <div class="row" >
+          <div class="columns small-3 col-minus"><img src="img/A_02_menu/btn_minus.png" /></div>
+          <div class="columns small-6 col-value">
+            <img src="img/A_02_menu/field_number.png" />
+            <input type="text" data-role="none" value="0" min="0" />
+          </div>
+          <div class="columns small-3 col-plus"><img src="img/A_02_menu/btn_plus.png" /> </div>
+        </div>
+      </div>
+    </div>
+    <!-- //item 1 -->
+    
+     <!-- item 2 -->
+    <div class="row item" >
+      <div class="columns small-4 col-tit" > Title Text </div>
+      <div class="columns small-2 col-hot" data-role="controlgroup" >
+        <label>
+          <input type="checkbox" />
+        </label>
+      </div>
+      <div class="columns small-2 col-cold" data-role="controlgroup" >
+        <label>
+          <input type="checkbox" />
+        </label>
+      </div>
+      <div class="columns small-4 col-num" >
+        <div class="row" >
+          <div class="columns small-3 col-minus"><img src="img/A_02_menu/btn_minus.png" /></div>
+          <div class="columns small-6 col-value">
+            <img src="img/A_02_menu/field_number.png" />
+            <input type="text" data-role="none" value="0" min="0" />
+          </div>
+          <div class="columns small-3 col-plus"><img src="img/A_02_menu/btn_plus.png" /> </div>
+        </div>
+      </div>
+    </div>
+    <!-- //item 2 -->
+    
+     <!-- item 3 -->
+    <div class="row item" >
+      <div class="columns small-4 col-tit" > Title Text </div>
+      <div class="columns small-2 col-hot" data-role="controlgroup" >
+        <label>
+          <input type="checkbox" />
+        </label>
+      </div>
+      <div class="columns small-2 col-cold" data-role="controlgroup" >
+        <label>
+          <input type="checkbox" />
+        </label>
+      </div>
+      <div class="columns small-4 col-num" >
+        <div class="row" >
+          <div class="columns small-3 col-minus"><img src="img/A_02_menu/btn_minus.png" /></div>
+          <div class="columns small-6 col-value">
+            <img src="img/A_02_menu/field_number.png" />
+            <input type="text" data-role="none" value="0" min="0" />
+          </div>
+          <div class="columns small-3 col-plus"><img src="img/A_02_menu/btn_plus.png" /> </div>
+        </div>
+      </div>
+    </div>
+    <!-- //item 3 -->
+    
+      <!-- item 4 -->
+    <div class="row item" >
+      <div class="columns small-4 col-tit" > Title Text </div>
+      <div class="columns small-2 col-hot" data-role="controlgroup" >
+        <label>
+          <input type="checkbox" />
+        </label>
+      </div>
+      <div class="columns small-2 col-cold" data-role="controlgroup" >
+        <label>
+          <input type="checkbox" />
+        </label>
+      </div>
+      <div class="columns small-4 col-num" >
+        <div class="row" >
+          <div class="columns small-3 col-minus"><img src="img/A_02_menu/btn_minus.png" /></div>
+          <div class="columns small-6 col-value">
+            <img src="img/A_02_menu/field_number.png" />
+            <input type="text" data-role="none" value="0" min="0" />
+          </div>
+          <div class="columns small-3 col-plus"><img src="img/A_02_menu/btn_plus.png" /> </div>
+        </div>
+      </div>
+    </div>
+    <!-- //item 4 -->
+    
+      <!-- item 5 -->
+    <div class="row item" >
+      <div class="columns small-4 col-tit" > Title Text </div>
+      <div class="columns small-2 col-hot" data-role="controlgroup" >
+        <label>
+          <input type="checkbox" />
+        </label>
+      </div>
+      <div class="columns small-2 col-cold" data-role="controlgroup" >
+        <label>
+          <input type="checkbox" />
+        </label>
+      </div>
+      <div class="columns small-4 col-num" >
+        <div class="row" >
+          <div class="columns small-3 col-minus"><img src="img/A_02_menu/btn_minus.png" /></div>
+          <div class="columns small-6 col-value">
+            <img src="img/A_02_menu/field_number.png" />
+            <input type="text" data-role="none" value="0" min="0" />
+          </div>
+          <div class="columns small-3 col-plus"><img src="img/A_02_menu/btn_plus.png" /> </div>
+        </div>
+      </div>
+    </div>
+    <!-- //item 5 -->
+    
+    
+    <!-- item 6 -->
+    <div class="row item" >
+      <div class="columns small-4 col-tit" > Title Text </div>
+      <div class="columns small-2 col-hot" data-role="controlgroup" >
+        <label>
+          <input type="checkbox" />
+        </label>
+      </div>
+      <div class="columns small-2 col-cold" data-role="controlgroup" >
+        <label>
+          <input type="checkbox" />
+        </label>
+      </div>
+      <div class="columns small-4 col-num" >
+        <div class="row" >
+          <div class="columns small-3 col-minus"><img src="img/A_02_menu/btn_minus.png" /></div>
+          <div class="columns small-6 col-value">
+            <img src="img/A_02_menu/field_number.png" />
+            <input type="text" data-role="none" value="0" min="0" />
+          </div>
+          <div class="columns small-3 col-plus"><img src="img/A_02_menu/btn_plus.png" /> </div>
+        </div>
+      </div>
+    </div>
+    <!-- //item 6 -->
+   
+     
+    <!-- Content Items -->   
+    <div class="row content-botom" >
+      <div class="columns small-12 col1" ><img src="img/A_02_menu/btn_menuconfirm.png" 
+      				onmousedown="this.src='img/A_02_menu/btn_menuconfirm_down.png';"
+					onmouseup="this.src='img/A_02_menu/btn_menuconfirm.png';"
+					ontouchstart="this.src='img/A_02_menu/btn_menuconfirm_down.png';"
+					ontouchend="this.src='img/A_02_menu/btn_menuconfirm.png';"  /></div>     
+    </div>
+    
+  </div>  
+  <div data-role="footer" data-theme="{{datatheme}}" data-position="fixed" class="footerMenu" >
+    <div class="row" >
+      <div class="columns small-4" ><img src="img/A_02_menu/BHA_menu-04.png" id="menu1"  /></div>
+      <div class="columns small-4" ><img src="img/A_02_menu/BHA_menu-02.png" id="menu2" 
+      				onmousedown="this.src='img/A_02_menu/BHA_menu-05.png';$('#menu3').attr('src','img/A_02_menu/BHA_menu-06.png');"
+					onmouseup="this.src='img/A_02_menu/BHA_menu-02.png';$('#menu3').attr('src','img/A_02_menu/BHA_menu-06_1.png');"
+					ontouchstart="this.src='img/A_02_menu/BHA_menu-05.png';$('#menu3').attr('src','img/A_02_menu/BHA_menu-06.png');"
+					ontouchend="this.src='img/A_02_menu/BHA_menu-02.png';$('#menu3').attr('src','img/A_02_menu/BHA_menu-06_1.png');"      
+      				onClick="pageLuncher('indexMain');" /></div>
+      <div class="columns small-4" ><img src="img/A_02_menu/BHA_menu-06_1.png" id="menu3" /></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

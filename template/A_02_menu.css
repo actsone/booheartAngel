@@ -1,0 +1,320 @@
+input:focus {
+	outline: none;
+}
+
+/*====================================================
+BH Angel - Menu 
+=====================================================*/
+/* all screen */
+#angelMenu #mainbody .wrapper {
+		margin: 0 10px 0 10px;
+		color: #594a42;
+}	
+#angelMenu .footerMenu .columns {
+	padding: 0;
+	margin: 0;
+}
+#angelMenu #mainbody
+{	
+	color:#594a42;
+}
+#angelMenu #mainbody .content-head1
+{
+	background:url(img/A_02_menu/bar.png) bottom repeat-x;
+	padding-bottom:15px;
+	font-size:25px;
+	font-weight:bold;	
+}
+#angelMenu #mainbody .content-head1 .columns,
+#angelMenu #mainbody .content-head2 .columns
+{
+	padding:0;
+	margin:0;
+}
+#angelMenu #mainbody .content-head1 .col1{
+	text-align:left;
+}
+#angelMenu #mainbody .content-head1 .col2{
+	text-align:right;
+}
+#angelMenu #mainbody .content-head2{
+	font-size:18px;
+	font-weight:bold;
+	margin-top:10px;
+	margin-bottom:15px;	
+}
+#angelMenu #mainbody .ui-controlgroup-controls label,
+#angelMenu #mainbody .ui-controlgroup-controls 
+{
+	border:none;
+	background:none;
+	height:35px;
+	box-shadow:none;
+	border-radius:0;
+}
+#angelMenu #mainbody .ui-controlgroup-controls .ui-icon-check:after,
+#angelMenu #mainbody .ui-controlgroup-controls .ui-icon-checkbox-on:after,
+#angelMenu #mainbody .ui-controlgroup-controls .ui-icon-checkbox-off:after 
+{
+	background:none;
+}
+#angelMenu #mainbody .ui-controlgroup-controls label
+{
+	background:none;
+}
+#angelMenu #mainbody .ui-controlgroup-controls .ui-checkbox
+{
+	width:30px;
+	overflow:hidden;
+	margin:auto;	
+	background:url(img/A_02_menu/checkbox.png) center center no-repeat !important;
+	background-size:25px auto !important;
+	background-color:none;
+}
+
+#angelMenu #mainbody .item .col-hot .ui-controlgroup-controls label.ui-icon-checkbox-on
+{
+	width:30px;
+	margin:auto;
+	background:url(img/A_02_menu/check_hot.png) left top no-repeat;	
+	background-size:30px auto;
+}
+#angelMenu #mainbody .item .col-cold .ui-controlgroup-controls label.ui-icon-checkbox-on
+{	
+	width:30px;
+	margin:auto;
+	background:url(img/A_02_menu/check_cold.png) left top no-repeat;
+	background-size:30px auto;	
+}
+#angelMenu #mainbody .ui-controlgroup-controls input
+{
+	visibility:hidden;
+}
+
+/* Number input */
+#angelMenu #mainbody .item .col-tit
+{
+	padding:7px 0 0 0;
+	text-align:left;
+}
+#angelMenu #mainbody .item .col-num .columns
+{
+	padding:0;
+	margin:0;	
+}
+#angelMenu #mainbody .item .col-hot,
+#angelMenu #mainbody .item .col-cold
+{
+	margin-top:5px;
+	padding:0;
+}
+#angelMenu #mainbody .item .col-num .columns .col-value
+{
+	position:relative;
+}
+#angelMenu #mainbody .item .col-num .col-value input
+{
+	padding:0;
+	height:100%;	
+	position:absolute;
+	top:0;
+	left:0;		
+	box-shadow:none;
+	border:none 0px;	
+	border-radius:10px;		
+	margin-bottom:0;	
+	text-align:center;
+	background:none;
+	font-size:18px;
+	color:#594a42;
+}
+#angelMenu #mainbody .item
+{
+	font-size:18px;
+	font-weight:normal;
+	margin-bottom:15px;
+}
+
+
+/* Smartphones (portrait: 320x480) ----------- */
+@media only screen and (min-width: 320px) and (max-width : 359px) {
+	
+	#angelMenu #mainbody .wrapper {
+		margin: 0 10px 0 10px;		
+	}	
+	#angelMenu #mainbody .content-head1
+	{		
+		font-size:25px;
+		
+	}	
+	#angelMenu #mainbody .content-head2{
+		font-size:18px;		
+		margin-top:10px;
+		margin-bottom:15px;	
+	}
+	#angelMenu #mainbody .ui-controlgroup-controls label,
+	#angelMenu #mainbody .ui-controlgroup-controls 
+	{		
+		height:35px;		
+	}
+	
+	#angelMenu #mainbody .ui-controlgroup-controls .ui-checkbox
+	{
+		width:30px;	
+		background-size:25px auto !important;		
+	}	
+	#angelMenu #mainbody .item .col-hot .ui-controlgroup-controls label.ui-icon-checkbox-on
+	{
+		width:30px;		
+		background-size:30px auto;
+	}
+	#angelMenu #mainbody .item .col-cold .ui-controlgroup-controls label.ui-icon-checkbox-on
+	{	
+		width:30px;		
+		background-size:30px auto;	
+	}	
+	
+	/* Number input */
+	#angelMenu #mainbody .item .col-tit
+	{
+		padding:7px 0 0 0;	
+	}	
+	#angelMenu #mainbody .item .col-hot,
+	#angelMenu #mainbody .item .col-cold
+	{
+		margin-top:5px;
+	}	
+	#angelMenu #mainbody .item .col-num .col-value input
+	{
+		font-size:18px;	
+	}
+	#angelMenu #mainbody .item
+	{
+		font-size:18px;		
+		margin-bottom:15px;
+	}
+}
+@media only screen and (min-width: 360px) and (max-width : 719px) {
+	
+	#angelMenu #mainbody .wrapper {
+		margin: 0 25px 0 25px;		
+	}
+	
+	#angelMenu #mainbody .content-head1
+	{		
+		font-size:30px;
+		
+	}	
+	#angelMenu #mainbody .content-head2{
+		font-size:25px;		
+		margin-top:10px;
+		margin-bottom:15px;	
+	}
+	#angelMenu #mainbody .ui-controlgroup-controls label,
+	#angelMenu #mainbody .ui-controlgroup-controls 
+	{		
+		height:35px;		
+	}
+	
+	#angelMenu #mainbody .ui-controlgroup-controls .ui-checkbox
+	{
+		width:35px;	
+		background-size:30px auto !important;		
+	}	
+	#angelMenu #mainbody .item .col-hot .ui-controlgroup-controls label.ui-icon-checkbox-on
+	{
+		width:35px;		
+		background-size:35px auto;
+	}
+	#angelMenu #mainbody .item .col-cold .ui-controlgroup-controls label.ui-icon-checkbox-on
+	{	
+		width:35px;		
+		background-size:35px auto;	
+	}	
+	
+	/* Number input */
+	#angelMenu #mainbody .item .col-tit
+	{
+		padding:13px 0 0 0;	
+	}	
+	#angelMenu #mainbody .item .col-hot,
+	#angelMenu #mainbody .item .col-cold
+	{
+		margin-top:5px;
+	}	
+	#angelMenu #mainbody .item .col-num .col-value input
+	{
+		font-size:18px;	
+	}
+	#angelMenu #mainbody .item
+	{
+		font-size:25px;		
+		margin-bottom:15px;
+	}
+}
+
+/* Smartphones (portrait: 720x1280(Galaxy s3))& 800x1280(Galaxy 10.1) or other tablet ----------- */
+@media only screen and (min-width: 720px) {
+	
+	#angelMenu #mainbody .wrapper {
+		margin: 0 45px 0 45px;		
+	}
+	
+	#angelMenu #mainbody .content-head1
+	{		
+		font-size:50px;
+		
+	}	
+	#angelMenu #mainbody .content-head2{
+		font-size:40px;		
+		margin-top:10px;
+		margin-bottom:15px;	
+	}
+	#angelMenu #mainbody .ui-controlgroup-controls label,
+	#angelMenu #mainbody .ui-controlgroup-controls 
+	{		
+		height:45px;		
+	}	
+	
+	#angelMenu #mainbody .ui-controlgroup-controls .ui-checkbox
+	{		
+		width:45px;
+		background-size:40px auto !important;		
+	}	
+	#angelMenu #mainbody .item .col-hot .ui-controlgroup-controls label.ui-icon-checkbox-on
+	{
+		width:60px;		
+		background-size:45px auto;
+	}
+	#angelMenu #mainbody .item .col-cold .ui-controlgroup-controls label.ui-icon-checkbox-on
+	{	
+		width:60px;		
+		background-size:45px auto;	
+	}	
+	
+	/* Number input */
+	#angelMenu #mainbody .item .col-tit
+	{
+		padding:15px 0 0 0;	
+	}	
+	#angelMenu #mainbody .item .col-hot,
+	#angelMenu #mainbody .item .col-cold
+	{
+		margin-top:10px;
+	}	
+	#angelMenu #mainbody .item .col-num .col-value input
+	{
+		font-size:25px;
+		line-height:25px;	
+	}	
+	#angelMenu #mainbody .item
+	{
+		font-size:25px;		
+		margin-bottom:15px;
+	}
+	#angelMenu .footerMenu .row
+	{
+		max-width:720px;
+		margin:auto;
+	}
+}

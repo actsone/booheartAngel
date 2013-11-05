@@ -1,0 +1,164 @@
+
+/* Smartphones (portrait: 320x480) ----------- */
+@media only screen and (min-width: 320px) and (max-width : 359px) {
+	#searchMain #mainbody .wrapper
+	{
+		margin:0 10px 0 10px;
+		color:#594a42;				
+	}
+	/* Search Input */
+	#searchMain #seachBox .columns
+	{
+		padding:0 !important;
+	}
+	#searchMain #seachBox
+	{
+		margin-bottom:10px;
+	}
+	#searchMain #seachBox input
+	{
+		border:none 0px;		
+		font-size:1em;
+		line-height:15px;
+		margin-bottom:0;	
+	}
+	#searchMain #seachBox img
+	{
+		position:absolute;
+		right:10px;
+		top:15px;
+		width:20px;
+	}
+	/* Search Result*/
+	#searchMain .search-result .row
+	{
+		margin-bottom:10px;
+	}
+	#searchMain .search-result .icon
+	{
+		padding-right:0px;
+		margin-left:-5px;
+		width:30px;
+	}
+	#searchMain .search-result .txt
+	{
+		font-size:1em;
+		line-height:10px;
+		margin-top:5px;
+	}
+	#searchMain .search-result .num
+	{
+		text-align:right;
+		padding:0 0px 0 0px;
+		margin-top:5px;
+	}
+}
+
+@media only screen and (min-width: 360px) and (max-width : 480px) {
+	#searchMain #mainbody .wrapper
+	{
+		margin:0 10px 0 10px;
+		color:#594a42;				
+	}
+	/* Search Input */
+	#searchMain #seachBox .columns
+	{
+		padding:0 !important;
+	}
+	#searchMain #seachBox
+	{
+		margin-bottom:10px;
+	}
+	#searchMain #seachBox input
+	{
+		border:none 0px;		
+		font-size:1em;
+		line-height:15px;
+		margin-bottom:0;	
+	}
+	#searchMain #seachBox img
+	{
+		position:absolute;
+		right:10px;
+		top:15px;
+		width:20px;
+	}
+	/* Search Result*/
+	#searchMain .search-result
+	{
+		margin-top:16px;
+	}
+	#searchMain .search-result .row
+	{
+		margin-top:16px;
+		/*margin-bottom:10px;*/
+	}
+	#searchMain .search-result .icon
+	{
+		padding-right:0px;
+		margin-left:-5px;
+		width:30px;
+	}
+	#searchMain .search-result .txt
+	{
+		font-size:1em;
+		line-height:10px;
+		margin-top:5px;
+	}
+	#searchMain .search-result .num
+	{
+		text-align:right;
+		padding:0 0px 0 0px;
+		/*margin-top:5px;*/
+	}
+}
+
+/* Smartphones (portrait: 720x1280(Galaxy s3))& 800x1280(Galaxy 10.1) or other tablet ----------- */
+@media only screen and (min-width: 720px) {
+	#searchMain #mainbody .wrapper
+	{
+		margin:0 45px 0 45px;
+		color:#594a42;				
+	}
+	/* Search Input */
+	#searchMain #seachBox .columns
+	{
+		padding:0 !important;
+	}
+	#searchMain #seachBox
+	{
+		margin-bottom:50px;
+	}
+	#searchMain #seachBox input
+	{
+		border:none 0px;		
+		font-size:35px;
+		line-height:35px;
+		margin-bottom:0;	
+	}
+	#searchMain #seachBox img
+	{
+		position:absolute;
+		right:15px;
+		top:22px;
+	}
+	/* Search Result*/
+	#searchMain .search-result .row
+	{
+		margin-bottom:22px;
+	}
+	#searchMain .search-result .txt,.searchMain .search-result .num
+	{
+		font-size:30px;
+		line-height:30px;
+	}
+	#searchMain .search-result .icon
+	{
+		padding-right:10px;
+	}
+	#searchMain .search-result .num
+	{
+		text-align:right;
+		padding:0 15px 0 0px;
+	}
+}

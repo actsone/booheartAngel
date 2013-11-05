@@ -1,0 +1,222 @@
+input:focus {
+	outline: none;
+}
+/*====================================================
+BH Angel - Cancel 
+=====================================================*/
+/* all screen */
+
+#angelCancel .footerMenu .columns {
+	padding: 0;
+	margin: 0;
+}
+#angelCancel #mainbody {
+	color: #594a42;
+}
+#angelCancel .footerMenu
+{
+	border:none;
+}
+#angelCancel .footerMenu .menu
+{
+	background:#FFF;
+}
+#angelCancel #mainbody .wrapper {	
+	font-size: 15px;
+	line-height: 15px;
+	margin: 0 15px 0 15px;
+	color: #594a42;	
+}
+#angelCancel #mainbody .wrapper .cancelItem {
+	background: url(img/A_03_cancel/bar.png) bottom center repeat-x;
+	overflow: hidden;
+	border-top:none 0px;
+}
+#angelCancel #mainbody .wrapper .cancelItem h2
+{
+	position:relative;
+	border: none 0px;
+}
+#angelCancel #mainbody .wrapper .cancelItem h2, #settingsFaq #mainbody .wrapper .cancelItem h2 a {
+	border: none 0px !important;
+}
+#angelCancel #mainbody .wrapper .cancelItem h2 .time
+{
+	position:absolute;
+	right:60px;	
+	font-size:12px;
+	font-weight:normal;
+}
+#angelCancel #mainbody .wrapper .cancelItem .ui-listview {
+	padding-bottom: 30px !important;
+	font-size: 15px;
+}
+#angelCancel #mainbody .wrapper .cancelItem h2 a {
+	margin-left: -50px;
+	font-size: 20px;
+	color: #594a42;
+	margin-right: 20px;
+	border: none 0px !important;
+}
+#angelCancel #mainbody .wrapper .cancelItem h2.ui-collapsible-heading-collapsed a {
+	background: url(img/A_03_cancel/expand_down.png) center right no-repeat;
+	background-size:20px auto;		
+}
+#angelCancel #mainbody .wrapper .cancelItem h2 a {
+	background: url(img/A_03_cancel/expand_up.png) center right no-repeat;
+	background-size:20px auto;	
+}
+#angelCancel-popup
+{
+	background:rgba(204,0,0,0.8);
+	color:#FFF;	
+	padding:20px;
+	border:solid 0px;
+	font-size:15px;
+	text-align:center;
+}
+#angelCancel-popup a
+{
+	font-size:20px;
+	font-weight:bold;
+	color:#FFF;
+	text-decoration:none;
+}
+
+
+/* Smartphones (portrait: 320x480) ----------- */
+@media only screen and (min-width: 320px) and (max-width : 359px) {
+	
+	#angelCancel #mainbody .wrapper {
+		margin: 0 15px 0 15px;			
+	}
+	
+	#angelCancel #mainbody .wrapper {		
+		font-size: 15px;
+		line-height: 15px;
+	}
+	#angelCancel #mainbody .wrapper .cancelItem h2 .time
+	{		
+		right:60px;	
+		font-size:12px;
+		padding-top:5px;		
+	}
+	#angelCancel #mainbody .wrapper .cancelItem .ui-listview {
+		padding-bottom: 30px !important;
+		font-size: 15px;
+	}
+	#angelCancel #mainbody .wrapper .cancelItem h2 a {
+		margin-left: -50px;
+		font-size: 20px;
+		color: #594a42;
+		margin-right: 10px;		
+	}
+	#angelCancel #mainbody .wrapper .cancelItem h2.ui-collapsible-heading-collapsed a {
+		background: url(img/A_03_cancel/expand_down.png) center right no-repeat;
+		background-size:20px auto;		
+	}
+	#angelCancel #mainbody .wrapper .cancelItem h2 a {
+		background: url(img/A_03_cancel/expand_up.png) center right no-repeat;
+		background-size:20px auto;	
+	}
+	#angelCancel-popup
+	{
+		font-size:15px;		
+	}
+	#angelCancel-popup a
+	{
+		font-size:20px;		
+	}
+	
+}
+@media only screen and (min-width: 360px) and (max-width : 719px) {
+	
+	#angelCancel #mainbody .wrapper {
+		margin: 0 25px 0 25px;		
+	}
+	
+	#angelCancel #mainbody .wrapper {		
+		font-size: 20px;
+		line-height: 20px;
+	}
+	#angelCancel #mainbody .wrapper .cancelItem h2 .time
+	{		
+		right:60px;	
+		font-size:18px;
+		padding-top:5px;		
+	}
+	#angelCancel #mainbody .wrapper .cancelItem .ui-listview {
+		padding-bottom: 30px !important;
+		font-size: 15px;
+	}
+	#angelCancel #mainbody .wrapper .cancelItem h2 a {
+		margin-left: -60px;
+		font-size: 25px;
+		color: #594a42;
+		margin-right: 10px;		
+	}
+	#angelCancel #mainbody .wrapper .cancelItem h2.ui-collapsible-heading-collapsed a {
+		background: url(img/A_03_cancel/expand_down.png) center right no-repeat;
+		background-size:30px auto;		
+	}
+	#angelCancel #mainbody .wrapper .cancelItem h2 a {
+		background: url(img/A_03_cancel/expand_up.png) center right no-repeat;
+		background-size:30px auto;	
+	}
+	#angelCancel-popup
+	{
+		font-size:20px;		
+	}
+	#angelCancel-popup a
+	{
+		font-size:25px;		
+	}
+}
+
+/* Smartphones (portrait: 720x1280(Galaxy s3))& 800x1280(Galaxy 10.1) or other tablet ----------- */
+@media only screen and (min-width: 720px) {
+		
+	#angelCancel #mainbody .wrapper {
+		margin: 0 45px 0 45px;		
+	}
+	
+	#angelCancel #mainbody .wrapper {		
+		font-size: 25px;
+		line-height: 25px;
+	}
+	#angelCancel #mainbody .wrapper .cancelItem h2 .time
+	{		
+		right:60px;	
+		font-size:20px;	
+		padding-top:5px;	
+	}
+	#angelCancel #mainbody .wrapper .cancelItem .ui-listview {
+		padding-bottom: 30px !important;
+		font-size: 20px;
+	}
+	#angelCancel #mainbody .wrapper .cancelItem h2 a {
+		margin-left: -70px;
+		font-size: 30px;
+		color: #594a42;
+		margin-right: 25px;		
+	}
+	#angelCancel #mainbody .wrapper .cancelItem h2.ui-collapsible-heading-collapsed a {
+		background: url(img/A_03_cancel/expand_down.png) center right no-repeat;		
+	}
+	#angelCancel #mainbody .wrapper .cancelItem h2 a {
+		background: url(img/A_03_cancel/expand_up.png) center right no-repeat;
+	}
+	#angelCancel-popup
+	{
+		font-size:25px;		
+	}
+	#angelCancel-popup a
+	{
+		font-size:30px;		
+	}
+	#angelCancel .footerMenu .row
+	{
+		max-width:720px;
+		margin:auto;
+	}
+}
